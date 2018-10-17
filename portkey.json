@@ -1,0 +1,10 @@
+{
+  "includes/WPBasePlugin/*.php": {
+    "type": "plugin",
+    "test": "tests/WPBasePlugin/%sTest.php"
+  },
+  "tests/WPBasePlugin/*Test.php": {
+    "type": "test",
+    "alternate": "includes/WPBasePlugin/%s.php"
+  }
+}
