@@ -113,6 +113,17 @@ class Plugin {
 
 		// GTM Support.
 		$this->gtm_support = new GTMSupport();
+
+		// Initialize admin classes.
+		if ( is_admin() ) {
+			$this->admin_support = [];
+			$this->register_objects( $this->admin_support );
+		}
+
+		// Initialize CLI commands if necessary.
+		if ( $this->is_wp_cli() ) {
+			\WP_CLI::add_command( 'mws migrate songs', '\MyWeddingSongs\CLI' );
+		}
 	}
 
 	/**
@@ -159,7 +170,7 @@ class Plugin {
 	 */
 	public function register_object( $object ) {
 		// Bail early if there are no registration methods.
-		if ( ! method_exists( $object, 'can_register' ) || ! method_exists( $object, 'register' ) ) {
+		if ( ! ( $object instanceof \Klarna\RegistrationInterface ) ) {
 			return;
 		}
 
@@ -170,5 +181,33 @@ class Plugin {
 
 		// Register the object.
 		$object->register();
+	}
+
+	/**
+	 * Checks if running in WP CLI mode.
+	 *
+	 * @return bool True if in CLI mode else false.
+	 */
+	public function is_wp_cli() {
+		return defined( 'WP_CLI' ) && WP_CLI;
+	}
+
+	/**
+	 * Magic getter for our object.
+	 *
+	 * @param  string $field Field to get.
+	 * @throws \Exception    Throws an exception if the field is invalid.
+	 * @return mixed         Value of the field.
+	 */
+	public function __get( $field ) {
+		switch ( $field ) {
+			case 'version':
+				return defined( 'MYWEDDINGSONGS_VERSION' ) ? MYWEDDINGSONGS_VERSION : false;
+			case 'taxonomy_factory':
+			case 'post_type_factory':
+				return $this->{$field};
+			default:
+				throw new \Exception( 'Invalid ' . __CLASS__ . ' property: ' . $field );
+		}
 	}
 }
