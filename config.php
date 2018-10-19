@@ -20,7 +20,7 @@ wpbaseplugin_define( 'WPBASEPLUGIN_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 // Post Types.
 wpbaseplugin_define( 'WPBASEPLUGIN_POST_POST_TYPE', 'post' );
 wpbaseplugin_define( 'WPBASEPLUGIN_PAGE_POST_TYPE', 'page' );
-wpbaseplugin_define( 'WPBASEPLUGIN_EXAMPLE_POST_TYPE', 'wpbaseplugin-example-cpt' );
+wpbaseplugin_define( 'WPBASEPLUGIN_EXAMPLE_POST_TYPE', 'wpbp-example-cpt' );
 
 // Taxonomies.
-wpbaseplugin_define( 'WPBASEPLUGIN_EXAMPLE_TAXONOMY', 'wpbaseplugin-example-taxonomy' );
+wpbaseplugin_define( 'WPBASEPLUGIN_EXAMPLE_TAXONOMY', 'wpbp-example-taxonomy' );

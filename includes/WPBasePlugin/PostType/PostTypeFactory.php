@@ -38,9 +38,9 @@ class PostTypeFactory implements \WPBasePlugin\FactoryInterface {
 	 * @var array
 	 */
 	protected $post_type_mapping = [
-		WPBASEPLUGIN_POST_POST_TYPE => 'PostPostType',
-		WPBASEPLUGIN_PAGE_POST_TYPE => 'PagePostType',
-		WPBASEPLUGIN_SONG_POST_TYPE => 'ExamplePostType',
+		WPBASEPLUGIN_POST_POST_TYPE    => 'PostPostType',
+		WPBASEPLUGIN_PAGE_POST_TYPE    => 'PagePostType',
+		WPBASEPLUGIN_EXAMPLE_POST_TYPE => 'ExamplePostType',
 	];
 
 	/**

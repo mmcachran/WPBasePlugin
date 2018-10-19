@@ -110,6 +110,4 @@ class TaxonomyFactoryTest extends \WP_UnitTestCase {
 		);
 	}
 
-
-
 }

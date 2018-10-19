@@ -202,7 +202,7 @@ class Plugin {
 	public function __get( $field ) {
 		switch ( $field ) {
 			case 'version':
-				return defined( 'MYWEDDINGSONGS_VERSION' ) ? MYWEDDINGSONGS_VERSION : false;
+				return defined( 'WPBASEPLUGIN_VERSION' ) ? WPBASEPLUGIN_VERSION : false;
 			case 'taxonomy_factory':
 			case 'post_type_factory':
 				return $this->{$field};
