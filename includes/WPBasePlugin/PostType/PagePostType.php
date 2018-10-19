@@ -62,7 +62,7 @@ class PagePostType extends AbstractPostType {
 	 * @return void
 	 */
 	public function register_taxonomies() {
-		// Unregister default taxnomies...
+		// Unregister default taxnomies then register the new taxonomies.
 		parent::register_taxonomies();
 	}
 }
