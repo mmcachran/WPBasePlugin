@@ -18,9 +18,9 @@
 namespace WPBasePlugin\Taxonomy;
 
 /**
- * A class for the Vehicle Make Taxonomy.
+ * A class for the Example Taxonomy.
  */
-class VehicleMakeTaxonomy extends AbstractTaxonomy {
+class ExampleTaxonomy extends AbstractTaxonomy {
 	/**
 	 * Returns the name of the taxonomy.
 	 *

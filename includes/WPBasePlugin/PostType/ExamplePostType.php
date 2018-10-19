@@ -1,6 +1,6 @@
 <?php
 /**
- * Class for the Song post type.
+ * Class for the example post type.
  *
  * @package WPBasePlugin
  */
@@ -10,7 +10,7 @@ namespace WPBasePlugin\PostType;
 /**
  * Class to create the Song post type.
  */
-class SongPostType extends AbstractPostType {
+class ExamplePostType extends AbstractPostType {
 	/**
 	 * Returns the name of the post type.
 	 *

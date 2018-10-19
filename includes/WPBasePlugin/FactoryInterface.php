@@ -10,7 +10,7 @@ namespace WPBasePlugin;
 /**
  * Interface for factory objects to implement.
  */
-interface WPBasePlugin {
+interface FactoryInterface {
 	/**
 	 * Determines if the object should be built.
 	 *

@@ -122,7 +122,7 @@ class Plugin {
 
 		// Initialize CLI commands if necessary.
 		if ( $this->is_wp_cli() ) {
-			\WP_CLI::add_command( 'mws migrate songs', '\MyWeddingSongs\CLI' );
+			\WP_CLI::add_command( 'wpbaseplugin example', '\WPBasePlugin\CLI\ExampleCommand' );
 		}
 	}
 
