@@ -10,7 +10,7 @@ namespace WPBasePlugin\PostType;
 /**
  * Class to create the Song post type.
  */
-class ExamplePostType extends AbstractPostType {
+class ExamplePostType extends AbstractPostType implements \WPBasePlugin\RegistrationInterface {
 	/**
 	 * Returns the name of the post type.
 	 *

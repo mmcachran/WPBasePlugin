@@ -10,7 +10,7 @@ namespace WPBasePlugin\PostType;
 /**
  * Abstract class for post types.
  */
-abstract class AbstractPostType implements \WPBasePlugin\RegistrationInterface {
+abstract class AbstractPostType {
 	/**
 	 * Get the post type name.
 	 *
