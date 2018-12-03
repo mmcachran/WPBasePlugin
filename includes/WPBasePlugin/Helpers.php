@@ -74,7 +74,7 @@ function get_array_property( $key, $data, $default = null ) {
  * @return mixed
  */
 function get_object_property( $key, $data, $default = null ) {
-	return isset( $data->$key ) ? $data->$key : $default;
+	return isset( $data->{$key} ) ? $data->{$key} : $default;
 }
 
 /**
