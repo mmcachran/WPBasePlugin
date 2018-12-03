@@ -170,7 +170,7 @@ class Plugin {
 	 */
 	public function register_object( $object ) {
 		// Bail early if there are no registration methods.
-		if ( ! ( $object instanceof \Klarna\RegistrationInterface ) ) {
+		if ( ! ( $object instanceof \WPBasePlugin\RegistrationInterface ) ) {
 			return;
 		}
 
