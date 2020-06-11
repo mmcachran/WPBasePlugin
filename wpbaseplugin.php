@@ -114,7 +114,7 @@ function wpbaseplugin_autoload_notice() {
 	$class   = 'notice notice-error';
 	$message = 'Error: Please run $ composer install in the WPBasePlugin plugin directory.';
 
-	printf( '<div class="%1$s"><p>%2$s</p></div>', esc_html( $class ), wp_kses_post( $message ) );
+	printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), wp_kses_post( $message ) );
 	error_log( $message ); // @codingStandardsIgnoreLine
 }
 
